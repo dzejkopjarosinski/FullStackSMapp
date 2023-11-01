@@ -4,7 +4,7 @@ const db = require('./models');
 const cors = require('cors');
 
 app.use(express.json());
-app.use(cors());
+app.use(cors()); //It whitelists API for the machine so you can make a request 
 
 const postRouter = require('./routes/Posts');
 

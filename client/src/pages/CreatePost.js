@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 // Formik is used to create form without using HTML form
 import {Formik, Form, Field, ErrorMessage} from 'formik';
@@ -19,7 +21,9 @@ function CreatePost(){
     });
 
     const onSubmit = (data) => {
-        console.log(data);
+        axios.post("http://localhost:3001/posts", data).then((response) =>{
+            console.log("It Worked !!!");
+        });
     };
     
     
